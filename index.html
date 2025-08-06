@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST Stats | F1 Data</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="images/fast_logo.png" alt="FAST logo" class="custom-logo" />
+                <span class="logo-text">FAST</span>
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/drivers.html" class="navbar__links">Drivers</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/teams.html" class="navbar__links">Teams</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/circuits.html" class="navbar__links">Circuits</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/vizzes.html" class="button">Vizzes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>FAST</h1>
+                <h2>STATS</h2>
+                <p>Live F1 Data. All in One Place.</p>
+                <button class="main__btn"><a href="/">EXPLORE NOW 🡪</a></button>
+            </div>
+            <div class="hero__slideshow" id="heroSlideshow"></div>
+        </div>
+    </div>
+
+    <!--Features Section-->
+    <div class="features">
+        <h1>Race through our data</h1>
+        <div class="features__container">
+            <div class="features__card">
+                <h2>Drivers</h2>
+                <p>View live WDC standings and driver stats.</p>
+                <button>Sneak A Peak</button>
+            </div>
+            <div class="features__card">
+                <h2>Teams</h2>
+                <p>View live WCC standings and team stats.</p>
+                <button>Sneak A Peak</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><i class="fa fa-car"></i>FAST</a>
+                </div>
+                <p class="website__rights">© 2025 FAST. All rights reserved.</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="/" class="social__icon--link" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        const heroSlideshow = document.getElementById('heroSlideshow');
+        const images = [
+            'images/hero1.jpg',
+            'images/hero2.jpg',
+            'images/hero3.jpg'
+        ];
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            heroSlideshow.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        changeBackgroundImage(); // Initial call
+        setInterval(changeBackgroundImage, 5000);
+    </script>
+
+</body>
+</html>

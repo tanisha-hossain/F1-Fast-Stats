@@ -1,0 +1,9 @@
+Home – Brief intro about F1 and the site
+
+Drivers – List of drivers + stats (API-driven)
+
+Teams – Constructor/team overview (API or static)
+
+Circuits – Circuit details and lap info (API + map embed)
+
+Visualizations – Tableau graphs on fastest laps, wins, pole positions, etc.
