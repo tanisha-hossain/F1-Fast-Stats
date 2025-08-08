@@ -67,13 +67,23 @@
         <div class="features__container">
             <div class="features__card">
                 <h2>Drivers</h2>
-                <p>View live WDC standings and driver stats.</p>
-                <button>Sneak A Peak</button>
+                <p>View live championship standings and driver stats</p>
+                <button><a href="/drivers.html">Check it out 🡪</a></button>
             </div>
             <div class="features__card">
                 <h2>Teams</h2>
-                <p>View live WCC standings and team stats.</p>
-                <button>Sneak A Peak</button>
+                <p>Uncover team rankings and performance trends</p>
+                <button><a href="/teams.html">Check it out 🡪</a></button>
+            </div>
+            <div class="features__card">
+                <h2>Circuits</h2>
+                <p>Explore track layouts, race history, and key stats</p>
+                <button><a href="/circuits.html">Check it out 🡪</a></button>
+            </div>
+            <div class="features__card">
+                <h2>Visualizations</h2>
+                <p>Interact with past data through engaging visuals</p>
+                <button><a href="/vizzes.html">Check it out 🡪</a></button>
             </div>
         </div>
     </div>
@@ -108,16 +118,15 @@
     <script src="app.js"></script>
     <script>
         const heroSlideshow = document.getElementById('heroSlideshow');
-        const images = [
-            'images/hero1.jpg',
-            'images/hero2.jpg',
-            'images/hero3.jpg'
+        const hero_images = [
+            'hero_images/hero1.jpg',
+            'hero_images/hero2.jpg'
         ];
         let currentIndex = 0;
 
         function changeBackgroundImage() {
-            heroSlideshow.style.backgroundImage = `url(${images[currentIndex]})`;
-            currentIndex = (currentIndex + 1) % images.length;
+            heroSlideshow.style.backgroundImage = `url(${hero_images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % hero_images.length;
         }
         changeBackgroundImage(); // Initial call
         setInterval(changeBackgroundImage, 5000);
