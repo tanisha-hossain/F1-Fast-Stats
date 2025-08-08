@@ -57,7 +57,9 @@
                 <p>Live F1 Data. All in One Place.</p>
                 <button class="main__btn"><a href="/">EXPLORE NOW 🡪</a></button>
             </div>
-            <div class="hero__slideshow" id="heroSlideshow"></div>
+            <div class="hero__slideshow" id="heroSlideshow">
+                <img id="heroImage" src="hero_images/hero1.jpg" alt="Hero Slideshow" />
+            </div>
         </div>
     </div>
 
@@ -132,12 +134,19 @@
             'hero_images/hero10.jpg'
         ];
         let currentIndex = 0;
+        const heroImage = document.getElementById('heroImage');
 
         function changeBackgroundImage() {
-            heroSlideshow.style.backgroundImage = `url(${hero_images[currentIndex]})`;
-            currentIndex = (currentIndex + 1) % hero_images.length;
+            heroImage.style.opacity = 0; //fade out
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % hero_images.length;
+                heroImage.src = hero_images[currentIndex];
+                // fade in
+                heroImage.onload = () => {
+                    heroImage.style.opacity = 1;
+                };
+            }, 1000); // matching transition duration
         }
-        changeBackgroundImage(); // Initial call
         setInterval(changeBackgroundImage, 5000);
     </script>
 
