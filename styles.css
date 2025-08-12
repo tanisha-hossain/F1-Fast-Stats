@@ -623,3 +623,93 @@
     font-weight: 700;
     color: #fff;
 }
+
+.driver__grid {
+  background:#141414;
+  color:#fff; 
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 1300px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+/* Driver cards */
+.driver-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 16px 16px 90px;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+.driver-card:hover { 
+    transform: translateY(-6px); 
+    box-shadow: 0 14px 34px rgba(0,0,0,.45); 
+}
+
+.driver-card.lift { 
+    transform: translateY(-10px) scale(1.03); 
+    box-shadow: 0 26px 60px rgba(0,0,0,.55); 
+}
+
+.driver-meta { 
+    position: relative; 
+    z-index: 1; 
+}
+.driver-name { 
+    font-size: 1.4rem; 
+    font-weight: 800; 
+    line-height: 1.1; 
+}
+.driver-sub { 
+    opacity: .95; 
+    font-weight: 700; 
+    margin-top: 4px; 
+}
+
+.driver-img {
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  height: 92%;
+  object-fit: cover;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.6));
+  pointer-events: none;
+}
+
+/* Modal popups for when driver cards clicked */
+.driver-modal {
+  width: min(900px, 96vw);
+  border: none;
+  border-radius: 18px;
+  padding: 0;
+  background: #0f0f0f;
+  color: #fff;
+}
+.driver-modal[open] { 
+    animation: scaleIn .18s ease; 
+}
+
+@keyframes scaleIn { 
+    from {transform: scale(.96); opacity:.5;} to {transform: scale(1); opacity:1;} 
+}
+
+.driver-modal #modalContent { 
+    padding: 22px; 
+}
+
+#closeModal {
+  position: absolute; 
+  right: 12px; 
+  top: 10px;
+  background: transparent; 
+  border: 0; 
+  color: #fff; 
+  font-size: 1.2rem; 
+  cursor: pointer;
+}

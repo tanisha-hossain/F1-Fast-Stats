@@ -25,11 +25,24 @@
             <p>Check out driver standings during the current season.</p>
         </div>
     </div>
-    
+
+    <!-- Drivers Grid Section -->
+    <section id="driversGrid" class="driver__grid"></section>
+
+    <!-- Expanded card modal -->
+    <dialog id="driverModal" class="driver-modal">
+        <button id="closeModal" aria-label="Close">✕</button>
+        <div id="modalContent"></div>
+    </dialog>
+
+    <!-- page-specific script -->
+    <script src="drivers.js" defer></script>
+
     <!-- Footer Section -->
     <div id="footer"></div>
 
     <script src="app.js"></script>
-    
+    <script src="drivers.js" defer></script>
+
 </body>
 </html>
