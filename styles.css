@@ -593,3 +593,33 @@
         flex-direction: column;
     }
 }
+
+
+/* Drivers Page */
+
+.drivers__container {
+    background-color: #141414;
+    padding: 70px;
+}
+
+.drivers__content {
+    text-align: center;
+}
+
+.drivers__content h1 {
+    font-size: 5rem;
+    background-color: #ff1e00;
+    background-image: linear-gradient(to bottom, #ff7462 0%, #ff523b 60%, #ff1e00 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.drivers__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
